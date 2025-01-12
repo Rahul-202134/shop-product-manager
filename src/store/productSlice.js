@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { databases, storage } from '../services/appwrite';
 import { Query } from 'appwrite'; // Correct import for Query
-
+import conf from '../conf/conf';
 // Fetch products from Appwrite
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async (category, { rejectWithValue }) => {
     try {
@@ -12,8 +12,8 @@ export const fetchProducts = createAsyncThunk('products/fetchProducts', async (c
 
         // Fetch documents from Appwrite database
         const response = await databases.listDocuments(
-            '6782b2ce00367b9978e9', // Database ID
-            '6782b3150028a886daf9', // Collection ID
+            conf.appwriteDatabaseId, // Database ID
+            conf.appwriteCollectionId, // Collection ID
             query
         );
 
@@ -38,9 +38,9 @@ export const fetchProducts = createAsyncThunk('products/fetchProducts', async (c
 // Fetch image URL from Appwrite storage
 const fetchImage = async (fileId) => {
     try {
-        const baseUrl = 'https://cloud.appwrite.io/v1';
-        const bucketId = '6782b3e700106aad29bb'; // Bucket ID
-        const projectId = '6782b1c500080e20f591'; // Project ID
+        const baseUrl = conf.appwriteUrl;
+        const bucketId = conf.appwriteBucketId; // Bucket ID
+        const projectId = conf.appwriteProjectId; // Project ID
 
         if (!fileId || !bucketId || !projectId) {
             throw new Error('Missing required parameters for fetching the image.');
