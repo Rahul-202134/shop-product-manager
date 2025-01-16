@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { account } from '../services/appwrite';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../store/authSlice';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -59,6 +60,15 @@ const Login = () => {
           >
             Login
           </button>
+          <Link
+            to="/register"
+
+          >
+            <button className="px-6 mt-2 py-2 bg-red-500 text-white rounded-lg hover:bg-blue-600 w-full">
+              Register
+            </button>
+
+          </Link>
         </form>
       </div>
     </div>

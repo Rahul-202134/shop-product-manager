@@ -102,7 +102,7 @@ const Header = () => {
                             >
                                 {user.name ? user.name.charAt(0) : 'U'}
                             </button>
-                            <div className="absolute right-0 mt-1  w-48 bg-white text-black shadow-lg rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
+                            <div className="absolute right-0  w-48 bg-white text-black shadow-lg rounded-lg z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
                                 <div className="px-4 py-2">{user.name}</div>
                                 <Logout onLogout={handleLogout} />
                                 {user.email === 'rahulkumar202134@gmail.com' && (
@@ -122,12 +122,6 @@ const Header = () => {
                                 className="bg-green-500 px-3 py-1 rounded hover:bg-green-600"
                             >
                                 Login
-                            </Link>
-                            <Link
-                                to="/register"
-                                className="bg-blue-500 px-3 py-1 rounded hover:bg-blue-600"
-                            >
-                                Register
                             </Link>
                         </>
                     )}
