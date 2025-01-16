@@ -5,7 +5,7 @@ const Logout = ({ onLogout }) => {
   return (
     <button
       onClick={onLogout}
-      className="bg-red-500 px-4 py-2 rounded text-white hover:bg-red-600"
+      className="w-full text-left px-4 py-2 text-red-500 hover:bg-gray-200"
     >
       Logout
     </button>

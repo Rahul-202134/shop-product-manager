@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { FaMobileAlt, FaLaptop, FaTv, FaHeadphones } from 'react-icons/fa';
 
 function Hero() {
     return (
-        <div className="relative bg-gradient-to-r from-blue-600 to-indigo-800 text-white min-h-[90vh] flex items-center justify-center">
+        <div className="relative bg-gradient-to-r from-blue-600 to-indigo-800 text-white min-h-[90vh] flex items-center justify-center z-10">
             {/* Background Overlay */}
             <div className="absolute inset-0 bg-opacity-90"></div>
 
@@ -67,7 +67,7 @@ function Hero() {
                 <div className="absolute bottom-0 right-0 w-60 h-60 bg-blue-300 rounded-full blur-2xl opacity-30"></div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Hero
+export default Hero;
