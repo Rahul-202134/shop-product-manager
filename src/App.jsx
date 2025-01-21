@@ -11,6 +11,8 @@ import ProductDetails from './pages/ProductDetails.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Router components
 import Footer from './components/Footer.jsx';
 import Products from './pages/Products.jsx';
+import Cart from './pages/Cart.jsx';
+import Checkout from './pages/Checkout.jsx';
 
 function App() {
 
@@ -28,6 +30,9 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path='/product_listing' element={<ProductListing />} />
           <Route path="/product/:productId" element={<ProductDetails />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+
         </Routes>
         <Footer />
       </Router>
